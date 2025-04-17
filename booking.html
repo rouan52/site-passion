@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <title>Glamour Restaurant chez Aya</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="Modèle de Site Web Gratuit" name="keywords">
-        <meta content="Modèle de Site Web Gratuit" name="description">
+        <meta content="Free Website Template" name="keywords">
+        <meta content="Free Website Template" name="description">
 
         <!-- Favicon -->
         <link href="img/favicon.ico" rel="icon">
@@ -36,14 +36,19 @@
 
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav ml-auto">
-                        <a href="index.html" class="nav-item nav-link">Accueil</a>
-                        <a href="about.html" class="nav-item nav-link">À Propos</a>
-                        <a href="feature.html" class="nav-item nav-link">Caractéristiques</a>
-                      
-                        <a href="menu.html" class="nav-item nav-link">Menu</a>
-                        <a href="booking.html" class="nav-item nav-link active">Réservation</a>
-                        
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        <a href="index.html" class="nav-item nav-link" data-translate="home">Home</a>
+                        <a href="about.html" class="nav-item nav-link" data-translate="about">About</a>
+                        <a href="feature.html" class="nav-item nav-link" data-translate="features">Features</a>
+                        <a href="team.html" class="nav-item nav-link" data-translate="team">Chef</a>
+                        <a href="menu.html" class="nav-item nav-link" data-translate="menu">Menu</a>
+                        <a href="booking.html" class="nav-item nav-link active" data-translate="booking">Booking</a>
+                        <a href="contact.html" class="nav-item nav-link" data-translate="contact">Contact</a>
+                        <li class="nav-item language-selector">
+                            <select id="languageSelect" onchange="changeLanguage(this.value)" class="form-control">
+                                <option value="fr">FR</option>
+                                <option value="en">EN</option>
+                            </select>
+                        </li>
                     </div>
                 </div>
             </div>
@@ -55,11 +60,11 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h2>Réserver une Table</h2>
+                        <h2 data-translate="booking-title">Book a Table</h2>
                     </div>
                     <div class="col-12">
-                        <a href="">Accueil</a>
-                        <a href="">Réservation</a>
+                        <a href="" data-translate="home">Home</a>
+                        <a href="" data-translate="booking">Booking</a>
                     </div>
                 </div>
             </div>
@@ -73,15 +78,15 @@
                     <div class="col-lg-7">
                         <div class="booking-content">
                             <div class="section-header">
-                                <p>Réserver une Table</p>
-                                <h2>Réservez Votre Table pour des Dîners Privés et des Happy Hours</h2>
+                                <p data-translate="booking-header">Book a Table</p>
+                                <h2 data-translate="booking-subtitle">Reserve Your Table for Private Dinners and Happy Hours</h2>
                             </div>
                             <div class="about-text">
-                                <p>
-                                    Réservez votre table dès maintenant pour profiter d'une expérience culinaire unique. Que ce soit pour un dîner privé ou pour profiter de nos happy hours, nous sommes là pour vous offrir le meilleur service.
+                                <p data-translate="booking-description">
+                                    Book your table now to enjoy a unique culinary experience. Whether for a private dinner or to enjoy our happy hours, we are here to offer you the best service.
                                 </p>
                                 <p>
-                                    Notre restaurant est l'endroit idéal pour célébrer des occasions spéciales ou simplement pour passer un bon moment entre amis ou en famille. Réservez dès maintenant et laissez-nous vous offrir une expérience inoubliable.
+                                    Our restaurant is the ideal place to celebrate special occasions or simply to have a good time with friends or family. Book now and let us offer you an unforgettable experience.
                                 </p>
                             </div>
                         </div>
@@ -91,7 +96,7 @@
                             <form>
                                 <div class="control-group">
                                     <div class="input-group">
-                                        <input type="text" class="form-control" placeholder="Nom" required="required" />
+                                        <input type="text" class="form-control" placeholder="Votre Nom" required="required" data-translate="your-name" />
                                         <div class="input-group-append">
                                             <div class="input-group-text"><i class="far fa-user"></i></div>
                                         </div>
@@ -99,7 +104,7 @@
                                 </div>
                                 <div class="control-group">
                                     <div class="input-group">
-                                        <input type="email" class="form-control" placeholder="Email" required="required" />
+                                        <input type="email" class="form-control" placeholder="Votre Email" required="required" data-translate="your-email" />
                                         <div class="input-group-append">
                                             <div class="input-group-text"><i class="far fa-envelope"></i></div>
                                         </div>
@@ -107,7 +112,7 @@
                                 </div>
                                 <div class="control-group">
                                     <div class="input-group">
-                                        <input type="text" class="form-control" placeholder="Mobile" required="required" />
+                                        <input type="text" class="form-control" placeholder="Mobile" required="required" data-translate="mobile" />
                                         <div class="input-group-append">
                                             <div class="input-group-text"><i class="fa fa-mobile-alt"></i></div>
                                         </div>
@@ -115,7 +120,7 @@
                                 </div>
                                 <div class="control-group">
                                     <div class="input-group date" id="date" data-target-input="nearest">
-                                        <input type="text" class="form-control datetimepicker-input" placeholder="Date" data-target="#date" data-toggle="datetimepicker"/>
+                                        <input type="text" class="form-control datetimepicker-input" placeholder="Date" data-target="#date" data-toggle="datetimepicker" data-translate="date"/>
                                         <div class="input-group-append" data-target="#date" data-toggle="datetimepicker">
                                             <div class="input-group-text"><i class="far fa-calendar-alt"></i></div>
                                         </div>
@@ -123,7 +128,7 @@
                                 </div>
                                 <div class="control-group">
                                     <div class="input-group time" id="time" data-target-input="nearest">
-                                        <input type="text" class="form-control datetimepicker-input" placeholder="Heure" data-target="#time" data-toggle="datetimepicker"/>
+                                        <input type="text" class="form-control datetimepicker-input" placeholder="Heure" data-target="#time" data-toggle="datetimepicker" data-translate="time"/>
                                         <div class="input-group-append" data-target="#time" data-toggle="datetimepicker">
                                             <div class="input-group-text"><i class="far fa-clock"></i></div>
                                         </div>
@@ -131,8 +136,8 @@
                                 </div>
                                 <div class="control-group">
                                     <div class="input-group">
-                                        <select class="custom-select form-control">
-                                            <option selected>Invité</option>
+                                        <select class="custom-select form-control" data-translate="guests">
+                                            <option selected>Invités</option>
                                             <option value="1">1 Invité</option>
                                             <option value="2">2 Invités</option>
                                             <option value="3">3 Invités</option>
@@ -150,7 +155,7 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <button class="btn custom-btn" type="submit">Réserver Maintenant</button>
+                                    <button class="btn custom-btn" type="submit" data-translate="book-now">Réserver Maintenant</button>
                                 </div>
                             </form>
                         </div>
@@ -165,7 +170,7 @@
             <div class="container">
                 <div class="section-header text-center">
                     <p>Menu</p>
-                    <h2>Menu Délicieux</h2>
+                    <h2>Delicious Menu</h2>
                 </div>
                 <div class="menu-tab">
                     <ul class="nav nav-pills justify-content-center">
@@ -176,7 +181,7 @@
                             <a class="nav-link" data-toggle="pill" href="#snacks">Snacks</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" data-toggle="pill" href="#beverages">Boissons</a>
+                            <a class="nav-link" data-toggle="pill" href="#beverages">Beverages</a>
                         </li>
                     </ul>
                     <div class="tab-content">
@@ -188,8 +193,8 @@
                                             <img src="img/menu-burger.jpg" alt="Image">
                                         </div>
                                         <div class="menu-text">
-                                            <h3><span>Mini Burger au Fromage</span> <strong>9,00€</strong></h3>
-                                            <p>Un délicieux mini burger au fromage, préparé avec des ingrédients frais et de haute qualité.</p>
+                                            <h3><span>Mini Cheese Burger</span> <strong>9,00€</strong></h3>
+                                            <p>A delicious mini cheese burger, made with fresh, high-quality ingredients.</p>
                                         </div>
                                     </div>
                                     <div class="menu-item">
@@ -198,7 +203,7 @@
                                         </div>
                                         <div class="menu-text">
                                             <h3><span>Double Burger</span> <strong>11,00€</strong></h3>
-                                            <p>Un double burger juteux, préparé avec des ingrédients frais et de haute qualité.</p>
+                                            <p>A juicy double burger, made with fresh, high-quality ingredients.</p>
                                         </div>
                                     </div>
                                     <div class="menu-item">
@@ -206,8 +211,8 @@
                                             <img src="img/menu-burger.jpg" alt="Image">
                                         </div>
                                         <div class="menu-text">
-                                            <h3><span>Bacon, Œuf et Fromage</span> <strong>13,00€</strong></h3>
-                                            <p>Un burger savoureux avec du bacon, un œuf et du fromage, préparé avec des ingrédients frais et de haute qualité.</p>
+                                            <h3><span>Bacon, Egg and Cheese</span> <strong>13,00€</strong></h3>
+                                            <p>A tasty burger with bacon, an egg, and cheese, made with fresh, high-quality ingredients.</p>
                                         </div>
                                     </div>
                                     <div class="menu-item">
@@ -215,8 +220,8 @@
                                             <img src="img/menu-burger.jpg" alt="Image">
                                         </div>
                                         <div class="menu-text">
-                                            <h3><span>Burger au Porc Effiloché</span> <strong>18,00€</strong></h3>
-                                            <p>Un burger au porc effiloché tendre et juteux, préparé avec des ingrédients frais et de haute qualité.</p>
+                                            <h3><span>Pulled Pork Burger</span> <strong>18,00€</strong></h3>
+                                            <p>A tender and juicy pulled pork burger, made with fresh, high-quality ingredients.</p>
                                         </div>
                                     </div>
                                     <div class="menu-item">
@@ -224,8 +229,8 @@
                                             <img src="img/menu-burger.jpg" alt="Image">
                                         </div>
                                         <div class="menu-text">
-                                            <h3><span>Burger au Poulet Frit</span> <strong>22,00€</strong></h3>
-                                            <p>Un burger au poulet frit croustillant, préparé avec des ingrédients frais et de haute qualité.</p>
+                                            <h3><span>Fried Chicken Burger</span> <strong>22,00€</strong></h3>
+                                            <p>A crispy fried chicken burger, made with fresh, high-quality ingredients.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -242,8 +247,8 @@
                                             <img src="img/menu-snack.jpg" alt="Image">
                                         </div>
                                         <div class="menu-text">
-                                            <h3><span>Corn Tikki - Aloo Frit Épicé</span> <strong>15,00€</strong></h3>
-                                            <p>Un délicieux snack épicé à base de pommes de terre frites, préparé avec des ingrédients frais et de haute qualité.</p>
+                                            <h3><span>Spicy Corn Tikki - Aloo Frit</span> <strong>15,00€</strong></h3>
+                                            <p>A delicious spicy snack made from fried potatoes, prepared with fresh, high-quality ingredients.</p>
                                         </div>
                                     </div>
                                     <div class="menu-item">
@@ -251,8 +256,8 @@
                                             <img src="img/menu-snack.jpg" alt="Image">
                                         </div>
                                         <div class="menu-text">
-                                            <h3><span>Toast de Pain au Besan</span> <strong>35,00€</strong></h3>
-                                            <p>Un toast savoureux au pain au besan, préparé avec des ingrédients frais et de haute qualité.</p>
+                                            <h3><span>Besan Bread Toast</span> <strong>35,00€</strong></h3>
+                                            <p>A tasty toast made from besan bread, prepared with fresh, high-quality ingredients.</p>
                                         </div>
                                     </div>
                                     <div class="menu-item">
@@ -260,8 +265,8 @@
                                             <img src="img/menu-snack.jpg" alt="Image">
                                         </div>
                                         <div class="menu-text">
-                                            <h3><span>Snacks de Soya Naturels</span> <strong>20,00€</strong></h3>
-                                            <p>Des snacks de soya naturels et savoureux, préparés avec des ingrédients frais et de haute qualité.</p>
+                                            <h3><span>Natural Soya Snacks</span> <strong>20,00€</strong></h3>
+                                            <p>Natural and tasty soya snacks, prepared with fresh, high-quality ingredients.</p>
                                         </div>
                                     </div>
                                     <div class="menu-item">
@@ -269,8 +274,8 @@
                                             <img src="img/menu-snack.jpg" alt="Image">
                                         </div>
                                         <div class="menu-text">
-                                            <h3><span>Morceaux de Soya Tandoori</span> <strong>30,00€</strong></h3>
-                                            <p>Des morceaux de soya tandoori savoureux, préparés avec des ingrédients frais et de haute qualité.</p>
+                                            <h3><span>Tandoori Soya Pieces</span> <strong>30,00€</strong></h3>
+                                            <p>Tasty tandoori soya pieces, prepared with fresh, high-quality ingredients.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -287,8 +292,8 @@
                                             <img src="img/menu-beverage.jpg" alt="Image">
                                         </div>
                                         <div class="menu-text">
-                                            <h3><span>Café en Tasse Unique</span> <strong>7,00€</strong></h3>
-                                            <p>Un café en tasse unique, préparé avec des ingrédients frais et de haute qualité.</p>
+                                            <h3><span>Unique Cup Coffee</span> <strong>7,00€</strong></h3>
+                                            <p>A unique cup of coffee, prepared with fresh, high-quality ingredients.</p>
                                         </div>
                                     </div>
                                     <div class="menu-item">
@@ -296,8 +301,8 @@
                                             <img src="img/menu-beverage.jpg" alt="Image">
                                         </div>
                                         <div class="menu-text">
-                                            <h3><span>Café Americano</span> <strong>9,00€</strong></h3>
-                                            <p>Un café americano savoureux, préparé avec des ingrédients frais et de haute qualité.</p>
+                                            <h3><span>Americano Coffee</span> <strong>9,00€</strong></h3>
+                                            <p>A tasty americano coffee, prepared with fresh, high-quality ingredients.</p>
                                         </div>
                                     </div>
                                     <div class="menu-item">
@@ -305,8 +310,8 @@
                                             <img src="img/menu-beverage.jpg" alt="Image">
                                         </div>
                                         <div class="menu-text">
-                                            <h3><span>Macchiato Caramel</span> <strong>15,00€</strong></h3>
-                                            <p>Un macchiato caramel savoureux, préparé avec des ingrédients frais et de haute qualité.</p>
+                                            <h3><span>Caramel Macchiato</span> <strong>15,00€</strong></h3>
+                                            <p>A tasty caramel macchiato, prepared with fresh, high-quality ingredients.</p>
                                         </div>
                                     </div>
                                     <div class="menu-item">
@@ -314,8 +319,8 @@
                                             <img src="img/menu-beverage.jpg" alt="Image">
                                         </div>
                                         <div class="menu-text">
-                                            <h3><span>Café Noir Standard</span> <strong>8,00€</strong></h3>
-                                            <p>Un café noir standard savoureux, préparé avec des ingrédients frais et de haute qualité.</p>
+                                            <h3><span>Standard Black Coffee</span> <strong>8,00€</strong></h3>
+                                            <p>A tasty standard black coffee, prepared with fresh, high-quality ingredients.</p>
                                         </div>
                                     </div>
                                     <div class="menu-item">
@@ -323,8 +328,8 @@
                                             <img src="img/menu-beverage.jpg" alt="Image">
                                         </div>
                                         <div class="menu-text">
-                                            <h3><span>Café Noir Standard</span> <strong>12,00€</strong></h3>
-                                            <p>Un café noir standard savoureux, préparé avec des ingrédients frais et de haute qualité.</p>
+                                            <h3><span>Standard Black Coffee</span> <strong>12,00€</strong></h3>
+                                            <p>A tasty standard black coffee, prepared with fresh, high-quality ingredients.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -347,7 +352,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="footer-contact">
-                                    <h2>Notre Adresse</h2>
+                                    <h2>Our Address</h2>
                                     <p><i class="fa fa-map-marker-alt"></i>41 Bis, Monte-Carlo, Monaco</p>
                                     <p><i class="fa fa-phone-alt"></i>+33 345 67890</p>
                                     <p><i class="fa fa-envelope"></i>info@glamourrestaurant.com</p>
@@ -362,11 +367,11 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="footer-link">
-                                    <h2>Liens Rapides</h2>
-                                    <a href="">Conditions d'utilisation</a>
-                                    <a href="">Politique de confidentialité</a>
+                                    <h2>Quick Links</h2>
+                                    <a href="">Terms of Use</a>
+                                    <a href="">Privacy Policy</a>
                                     <a href="">Cookies</a>
-                                    <a href="">Aide</a>
+                                    <a href="">Help</a>
                                     <a href="">FAQ</a>
                                 </div>
                             </div>
@@ -376,11 +381,11 @@
                         <div class="footer-newsletter">
                             <h2>Newsletter</h2>
                             <p>
-                                Abonnez-vous à notre newsletter pour recevoir les dernières nouvelles, offres spéciales et événements directement dans votre boîte de réception.
+                                Subscribe to our newsletter to receive the latest news, special offers, and events directly in your inbox.
                             </p>
                             <div class="form">
-                                <input class="form-control" placeholder="Entrez votre email ici">
-                                <button class="btn custom-btn">Soumettre</button>
+                                <input class="form-control" placeholder="Enter your email here">
+                                <button class="btn custom-btn">Submit</button>
                             </div>
                         </div>
                     </div>
@@ -388,8 +393,8 @@
             </div>
             <div class="copyright">
                 <div class="container">
-                    <p>Copyright &copy; <a href="#">Nom de Votre Site</a>, Tous Droits Réservés.</p>
-                    <p>Designé par <a href="https://htmlcodex.com">HTML Codex</a></p>
+                    <p>Copyright &copy; <a href="#">Your Site Name</a>, All Rights Reserved.</p>
+                    <p>Designed by <a href="https://htmlcodex.com">HTML Codex</a></p>
                 </div>
             </div>
         </div>
@@ -412,5 +417,56 @@
 
         <!-- Template JavaScript -->
         <script src="js/main.js"></script>
+
+        <script>
+        const translations = {
+            fr: {
+                "home": "Accueil",
+                "about": "À Propos",
+                "features": "Caractéristiques",
+                "team": "Équipe",
+                "menu": "Menu",
+                "booking": "Réservation",
+                "contact": "Contact",
+                "booking-title": "Réserver une Table",
+                "booking-header": "Réserver une Table",
+                "booking-subtitle": "Réservez Votre Table pour des Dîners Privés et des Happy Hours",
+                "booking-description": "Réservez votre table dès maintenant pour profiter d'une expérience culinaire unique. Que ce soit pour un dîner privé ou pour profiter de nos happy hours, nous sommes là pour vous offrir le meilleur service.",
+                // Ajoutez d'autres traductions ici
+            },
+            en: {
+                "home": "Home",
+                "about": "About",
+                "features": "Features",
+                "team": "Team",
+                "menu": "Menu",
+                "booking": "Booking",
+                "contact": "Contact",
+                "booking-title": "Book a Table",
+                "booking-header": "Book a Table",
+                "booking-subtitle": "Reserve Your Table for Private Dinners and Happy Hours",
+                "booking-description": "Book your table now to enjoy a unique culinary experience. Whether for a private dinner or to enjoy our happy hours, we are here to offer you the best service.",
+                // Ajoutez d'autres traductions ici
+            }
+        };
+
+        function changeLanguage(lang) {
+            const elements = document.querySelectorAll('[data-translate]');
+            elements.forEach(element => {
+                const key = element.getAttribute('data-translate');
+                if (translations[lang][key]) {
+                    element.innerHTML = translations[lang][key];
+                }
+            });
+
+            localStorage.setItem('selectedLanguage', lang);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLanguage = localStorage.getItem('selectedLanguage') || 'fr';
+            document.getElementById('languageSelect').value = savedLanguage;
+            changeLanguage(savedLanguage);
+        });
+        </script>
     </body>
 </html>
