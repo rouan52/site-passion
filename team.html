@@ -29,21 +29,26 @@
         <!-- Nav Bar Start -->
         <div class="navbar navbar-expand-lg bg-light navbar-light">
             <div class="container-fluid">
-                <a href="index.html" class="navbar-brand">Glamour  <span> Restaurant</span></a>
+                <a href="index.html" class="navbar-brand">Glamour <span>Restaurant</span></a>
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav ml-auto">
-                        <a href="index.html" class="nav-item nav-link">Accueil</a>
-                        <a href="about.html" class="nav-item nav-link">À Propos</a>
-                        <a href="feature.html" class="nav-item nav-link">Caractéristiques</a>
-                        <a href="team.html" class="nav-item nav-link active">Chef</a>
-                        <a href="menu.html" class="nav-item nav-link">Menu</a>
-                        <a href="booking.html" class="nav-item nav-link">Réservation</a>
-                        
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        <a href="index.html" class="nav-item nav-link" data-translate="home">Accueil</a>
+                        <a href="about.html" class="nav-item nav-link" data-translate="about">À Propos</a>
+                        <a href="feature.html" class="nav-item nav-link" data-translate="features">Caractéristiques</a>
+                        <a href="team.html" class="nav-item nav-link active" data-translate="team">Chef</a>
+                        <a href="menu.html" class="nav-item nav-link" data-translate="menu">Menu</a>
+                        <a href="booking.html" class="nav-item nav-link" data-translate="booking">Réservation</a>
+                        <a href="contact.html" class="nav-item nav-link" data-translate="contact">Contact</a>
+                        <li class="nav-item language-selector">
+                            <select id="languageSelect" onchange="changeLanguage(this.value)" class="form-control">
+                                <option value="fr">FR</option>
+                                <option value="en">EN</option>
+                            </select>
+                        </li>
                     </div>
                 </div>
             </div>
@@ -55,11 +60,11 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h2>Notre Équipe</h2>
+                        <h2 data-translate="team-title">Notre Équipe</h2>
                     </div>
                     <div class="col-12">
-                        <a href="">Accueil</a>
-                        <a href="">Notre Équipe</a>
+                        <a href="" data-translate="home">Accueil</a>
+                        <a href="" data-translate="team">Notre Équipe</a>
                     </div>
                 </div>
             </div>
@@ -70,8 +75,8 @@
         <div class="team">
             <div class="container">
                 <div class="section-header text-center">
-                    <p>Notre Équipe</p>
-                    <h2>Nos Chefs Maîtres</h2>
+                    <p data-translate="team-title">Notre Équipe</p>
+                    <h2 data-translate="team-subtitle">Nos Chefs Maîtres</h2>
                 </div>
                 <div class="row">
                     <div class="col-lg-3 col-md-6">
@@ -86,8 +91,8 @@
                                 </div>
                             </div>
                             <div class="team-text">
-                                <h2>Adam Phillips</h2>
-                                <p>PDG, Co-Fondateur</p>
+                                <h2 data-translate="chef-name-1">Adam Phillips</h2>
+                                <p data-translate="chef-role-1">PDG, Co-Fondateur</p>
                             </div>
                         </div>
                     </div>
@@ -103,8 +108,8 @@
                                 </div>
                             </div>
                             <div class="team-text">
-                                <h2>Dylan Adams</h2>
-                                <p>Chef Maître</p>
+                                <h2 data-translate="chef-name-2">Dylan Adams</h2>
+                                <p data-translate="chef-role-2">Chef Maître</p>
                             </div>
                         </div>
                     </div>
@@ -120,8 +125,8 @@
                                 </div>
                             </div>
                             <div class="team-text">
-                                <h2>Jhon Doe</h2>
-                                <p>Chef Maître</p>
+                                <h2 data-translate="chef-name-3">Jhon Doe</h2>
+                                <p data-translate="chef-role-3">Chef Maître</p>
                             </div>
                         </div>
                     </div>
@@ -137,8 +142,8 @@
                                 </div>
                             </div>
                             <div class="team-text">
-                                <h2>Josh Dunn</h2>
-                                <p>Chef Maître</p>
+                                <h2 data-translate="chef-name-4">Josh Dunn</h2>
+                                <p data-translate="chef-role-4">Chef Maître</p>
                             </div>
                         </div>
                     </div>
