@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <title>Glamour Restaurant chez Aya</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="Modèle de Site Web Gratuit" name="keywords">
-        <meta content="Modèle de Site Web Gratuit" name="description">
+        <meta content="Free Website Template" name="keywords">
+        <meta content="Free Website Template" name="description">
 
         <!-- Favicon -->
         <link href="img/favicon.ico" rel="icon">
@@ -29,20 +29,26 @@
         <!-- Nav Bar Start -->
         <div class="navbar navbar-expand-lg bg-light navbar-light">
             <div class="container-fluid">
-                <a href="index.html" class="navbar-brand">Glamour <span>Restaurant</span></a>
+                <a href="index.html" class="navbar-brand" data-translate="restaurant-name">Glamour <span>Restaurant</span></a>
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav ml-auto">
-                        <a href="index.html" class="nav-item nav-link active">Accueil</a>
-                        <a href="about.html" class="nav-item nav-link">À Propos</a>
-                        <a href="feature.html" class="nav-item nav-link">Caractéristiques</a>
-                        
-                        <a href="menu.html" class="nav-item nav-link">Menu</a>
-                        <a href="booking.html" class="nav-item nav-link">Réservation</a>
-                                                <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        <a href="index.html" class="nav-item nav-link active" data-translate="home">Home</a>
+                        <a href="about.html" class="nav-item nav-link" data-translate="about">About</a>
+                        <a href="feature.html" class="nav-item nav-link" data-translate="features">Features</a>
+                        <a href="team.html" class="nav-item nav-link active" data-translate="team">Chef</a>
+                        <a href="menu.html" class="nav-item nav-link" data-translate="menu">Menu</a>
+                        <a href="booking.html" class="nav-item nav-link" data-translate="booking">Booking</a>
+                        <a href="contact.html" class="nav-item nav-link" data-translate="contact">Contact</a>
+                        <li class="nav-item language-selector">
+                            <select id="languageSelect" onchange="changeLanguage(this.value)" class="form-control">
+                                <option value="fr">FR</option>
+                                <option value="en">EN</option>
+                            </select>
+                        </li>
                     </div>
                 </div>
             </div>
@@ -58,13 +64,13 @@
                             <img src="img/carousel-1.jpg" alt="Image">
                         </div>
                         <div class="carousel-text">
-                            <h1>Meilleurs <span>Ingrédients</span> de Qualité</h1>
-                            <p>
-                                Nous utilisons uniquement les ingrédients les plus frais et de la meilleure qualité pour préparer nos plats. Chaque plat est préparé avec soin pour garantir une expérience culinaire exceptionnelle.
+                            <h1 data-translate="hero-title">Le meilleur endroit pour déguster des plats délicieux!</h1>
+                            <p data-translate="hero-description">
+                                Nous utilisons uniquement les ingrédients les plus frais et de la plus haute qualité pour préparer nos plats. Chaque plat est préparé avec soin pour garantir une expérience culinaire exceptionnelle.
                             </p>
                             <div class="carousel-btn">
-                                <a class="btn custom-btn" href="">Voir le Menu</a>
-                                <a class="btn custom-btn" href="">Réserver une Table</a>
+                                <a class="btn custom-btn" href="" data-translate="view-menu">Voir le Menu</a>
+                                <a class="btn custom-btn" href="" data-translate="book-table">Réserver une Table</a>
                             </div>
                         </div>
                     </div>
@@ -73,13 +79,13 @@
                             <img src="img/carousel-2.jpg" alt="Image">
                         </div>
                         <div class="carousel-text">
-                            <h1>Meilleur <span>Chef</span> du Monde</h1>
-                            <p>
-                                Notre chef est reconnu mondialement pour ses compétences culinaires exceptionnelles. Chaque plat est une œuvre d'art, préparée avec passion et précision.
+                            <h1 data-translate="hero-title-2">Meilleur <span>Chef</span> au Monde</h1>
+                            <p data-translate="hero-description-2">
+                                Notre chef est reconnu dans le monde entier pour ses compétences culinaires exceptionnelles. Chaque plat est une œuvre d'art, préparée avec passion et précision.
                             </p>
                             <div class="carousel-btn">
-                                <a class="btn custom-btn" href="">Voir le Menu</a>
-                                <a class="btn custom-btn" href="">Réserver une Table</a>
+                                <a class="btn custom-btn" href="" data-translate="view-menu">Voir le Menu</a>
+                                <a class="btn custom-btn" href="" data-translate="book-table">Réserver une Table</a>
                             </div>
                         </div>
                     </div>
@@ -88,13 +94,13 @@
                             <img src="img/carousel-3.jpg" alt="Image">
                         </div>
                         <div class="carousel-text">
-                            <h1>Livraison la plus <span>Rapide</span></h1>
-                            <p>
-                                Nous offrons une livraison rapide et fiable pour que vous puissiez savourer nos délicieux plats chez vous en un rien de temps.
+                            <h1 data-translate="hero-title-3">Livraison <span>Rapide</span></h1>
+                            <p data-translate="hero-description-3">
+                                Nous offrons une livraison rapide et fiable pour que vous puissiez profiter de nos délicieux plats chez vous en un rien de temps.
                             </p>
                             <div class="carousel-btn">
-                                <a class="btn custom-btn" href="">Voir le Menu</a>
-                                <a class="btn custom-btn" href="">Réserver une Table</a>
+                                <a class="btn custom-btn" href="" data-translate="view-menu">Voir le Menu</a>
+                                <a class="btn custom-btn" href="" data-translate="book-table">Réserver une Table</a>
                             </div>
                         </div>
                     </div>
@@ -106,92 +112,84 @@
         <!-- Booking Start -->
         <div class="booking">
             <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-7">
-                        <div class="booking-content">
-                            <div class="section-header">
-                                <p>Réserver une Table</p>
-                                <h2>Réservez Votre Table pour des Dîners Privés et des Happy Hours</h2>
-                            </div>
-                            <div class="about-text">
-                                <p>
-                                    Réservez votre table dès maintenant pour profiter d'une expérience culinaire unique. Que ce soit pour un dîner privé ou pour profiter de nos happy hours, nous sommes là pour vous offrir le meilleur service.
-                                </p>
-                                <p>
-                                    Notre restaurant est l'endroit idéal pour célébrer des occasions spéciales ou simplement pour passer un bon moment entre amis ou en famille. Réservez dès maintenant et laissez-nous vous offrir une expérience inoubliable.
-                                </p>
+                <div class="section-header text-center">
+                    <h2 data-translate="booking-title">Réserver une Table</h2>
+                    <p data-translate="booking-subtitle">Réservez Votre Table pour des Dîners Privés et des Happy Hours</p>
+                </div>
+                <div class="booking-description">
+                    <p data-translate="booking-description">
+                        Réservez votre table dès maintenant pour profiter d'une expérience culinaire unique. Que ce soit pour un dîner privé ou pour profiter de nos happy hours, nous sommes là pour vous offrir le meilleur service.
+                    </p>
+                    <p data-translate="booking-ideal-place">
+                        Notre restaurant est l'endroit idéal pour célébrer des occasions spéciales ou simplement passer un bon moment avec des amis ou la famille. Réservez maintenant et laissez-nous vous offrir une expérience inoubliable.
+                    </p>
+                </div>
+                <div class="booking-form">
+                    <form>
+                        <div class="control-group">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Votre Nom" required="required" data-translate="your-name" />
+                                <div class="input-group-append">
+                                    <div class="input-group-text"><i class="far fa-user"></i></div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-5">
-                        <div class="booking-form">
-                            <form>
-                                <div class="control-group">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" placeholder="Nom" required="required" />
-                                        <div class="input-group-append">
-                                            <div class="input-group-text"><i class="far fa-user"></i></div>
-                                        </div>
-                                    </div>
+                        <div class="control-group">
+                            <div class="input-group">
+                                <input type="email" class="form-control" placeholder="Votre Email" required="required" data-translate="your-email" />
+                                <div class="input-group-append">
+                                    <div class="input-group-text"><i class="far fa-envelope"></i></div>
                                 </div>
-                                <div class="control-group">
-                                    <div class="input-group">
-                                        <input type="email" class="form-control" placeholder="Email" required="required" />
-                                        <div class="input-group-append">
-                                            <div class="input-group-text"><i class="far fa-envelope"></i></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="control-group">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" placeholder="Mobile" required="required" />
-                                        <div class="input-group-append">
-                                            <div class="input-group-text"><i class="fa fa-mobile-alt"></i></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="control-group">
-                                    <div class="input-group date" id="date" data-target-input="nearest">
-                                        <input type="text" class="form-control datetimepicker-input" placeholder="Date" data-target="#date" data-toggle="datetimepicker"/>
-                                        <div class="input-group-append" data-target="#date" data-toggle="datetimepicker">
-                                            <div class="input-group-text"><i class="far fa-calendar-alt"></i></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="control-group">
-                                    <div class="input-group time" id="time" data-target-input="nearest">
-                                        <input type="text" class="form-control datetimepicker-input" placeholder="Heure" data-target="#time" data-toggle="datetimepicker"/>
-                                        <div class="input-group-append" data-target="#time" data-toggle="datetimepicker">
-                                            <div class="input-group-text"><i class="far fa-clock"></i></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="control-group">
-                                    <div class="input-group">
-                                        <select class="custom-select form-control">
-                                            <option selected>Invité</option>
-                                            <option value="1">1 Invité</option>
-                                            <option value="2">2 Invités</option>
-                                            <option value="3">3 Invités</option>
-                                            <option value="4">4 Invités</option>
-                                            <option value="5">5 Invités</option>
-                                            <option value="6">6 Invités</option>
-                                            <option value="7">7 Invités</option>
-                                            <option value="8">8 Invités</option>
-                                            <option value="9">9 Invités</option>
-                                            <option value="10">10 Invités</option>
-                                        </select>
-                                        <div class="input-group-append">
-                                            <div class="input-group-text"><i class="fa fa-chevron-down"></i></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <button class="btn custom-btn" type="submit">Réserver Maintenant</button>
-                                </div>
-                            </form>
+                            </div>
                         </div>
-                    </div>
+                        <div class="control-group">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Mobile" required="required" data-translate="mobile" />
+                                <div class="input-group-append">
+                                    <div class="input-group-text"><i class="fa fa-mobile-alt"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <div class="input-group date" id="date" data-target-input="nearest">
+                                <input type="text" class="form-control datetimepicker-input" placeholder="Date" data-target="#date" data-toggle="datetimepicker" data-translate="date"/>
+                                <div class="input-group-append" data-target="#date" data-toggle="datetimepicker">
+                                    <div class="input-group-text"><i class="far fa-calendar-alt"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <div class="input-group time" id="time" data-target-input="nearest">
+                                <input type="text" class="form-control datetimepicker-input" placeholder="Heure" data-target="#time" data-toggle="datetimepicker" data-translate="time"/>
+                                <div class="input-group-append" data-target="#time" data-toggle="datetimepicker">
+                                    <div class="input-group-text"><i class="far fa-clock"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <div class="input-group">
+                                <select class="custom-select form-control" data-translate="guests">
+                                    <option selected>Invités</option>
+                                    <option value="1">1 Invité</option>
+                                    <option value="2">2 Invités</option>
+                                    <option value="3">3 Invités</option>
+                                    <option value="4">4 Invités</option>
+                                    <option value="5">5 Invités</option>
+                                    <option value="6">6 Invités</option>
+                                    <option value="7">7 Invités</option>
+                                    <option value="8">8 Invités</option>
+                                    <option value="9">9 Invités</option>
+                                    <option value="10">10 Invités</option>
+                                </select>
+                                <div class="input-group-append">
+                                    <div class="input-group-text"><i class="fa fa-chevron-down"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="btn custom-btn" type="submit" data-translate="book-now">Réserver Maintenant</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -212,17 +210,17 @@
                     <div class="col-lg-6">
                         <div class="about-content">
                             <div class="section-header">
-                                <p>À Propos de Nous</p>
-                                <h2>Cuisine Depuis 1990</h2>
+                                <p data-translate="about-title">À Propos de Nous</p>
+                                <h2 data-translate="about-subtitle">Cuisine Depuis 1990</h2>
                             </div>
                             <div class="about-text">
-                                <p>
+                                <p data-translate="about-description">
                                     Depuis 1990, nous nous efforçons de vous offrir une expérience culinaire exceptionnelle. Notre passion pour la cuisine et notre engagement envers la qualité nous ont permis de devenir l'un des restaurants les plus appréciés de la région.
                                 </p>
-                                <p>
-                                    Chaque plat est préparé avec des ingrédients frais et de haute qualité, et notre équipe de chefs talentueux s'assure que chaque bouchée est un délice. Que vous veniez pour un dîner romantique, une célébration spéciale ou simplement pour passer un bon moment, nous sommes là pour vous offrir une expérience inoubliable.
+                                <p data-translate="about-description-2">
+                                    Chaque plat est préparé avec des ingrédients frais et de haute qualité, et notre équipe de chefs talentueux veille à ce que chaque bouchée soit un délice. Que vous veniez pour un dîner romantique, une célébration spéciale ou simplement pour passer un bon moment, nous sommes là pour vous offrir une expérience inoubliable.
                                 </p>
-                                <a class="btn custom-btn" href="">Réserver une Table</a>
+                                <a class="btn custom-btn" href="" data-translate="book-table">Réserver une Table</a>
                             </div>
                         </div>
                     </div>
@@ -255,8 +253,8 @@
                 <div class="row">
                     <div class="col-lg-5">
                         <div class="section-header">
-                            <p>Pourquoi Nous Choisir</p>
-                            <h2>Nos Caractéristiques Clés</h2>
+                            <p data-translate="features-title">Pourquoi Nous Choisir</p>
+                            <h2 data-translate="features-subtitle">Nos Caractéristiques Clés</h2>
                         </div>
                         <div class="feature-text">
                             <div class="feature-img">
@@ -275,10 +273,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <p>
-                                Notre restaurant se distingue par son engagement envers la qualité, l'innovation et le service client exceptionnel. Nous utilisons uniquement les ingrédients les plus frais et de la meilleure qualité pour préparer nos plats, et notre équipe de chefs talentueux s'assure que chaque bouchée est un délice.
+                            <p data-translate="features-description">
+                                Notre restaurant se distingue par son engagement envers la qualité, l'innovation et le service client exceptionnel. Nous utilisons uniquement les ingrédients les plus frais et de la plus haute qualité pour préparer nos plats, et notre équipe de chefs talentueux veille à ce que chaque bouchée soit un délice.
                             </p>
-                            <a class="btn custom-btn" href="">Réserver une Table</a>
+                            <a class="btn custom-btn" href="" data-translate="book-table">Réserver une Table</a>
                         </div>
                     </div>
                     <div class="col-lg-7">
@@ -286,18 +284,18 @@
                             <div class="col-sm-6">
                                 <div class="feature-item">
                                     <i class="flaticon-cooking"></i>
-                                    <h3>Meilleur Chef du Monde</h3>
-                                    <p>
-                                        Notre chef est reconnu mondialement pour ses compétences culinaires exceptionnelles. Chaque plat est une œuvre d'art, préparée avec passion et précision.
+                                    <h2 data-translate="feature-1-title">Meilleur Chef au Monde</h2>
+                                    <p data-translate="feature-1-description">
+                                        Notre chef est reconnu dans le monde entier pour ses compétences culinaires exceptionnelles. Chaque plat est une œuvre d'art, préparée avec passion et précision.
                                     </p>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="feature-item">
                                     <i class="flaticon-vegetable"></i>
-                                    <h3>Ingrédients Naturels</h3>
-                                    <p>
-                                        Nous utilisons uniquement des ingrédients naturels et de haute qualité pour préparer nos plats. Chaque bouchée est un délice, préparée avec soin et passion.
+                                    <h2 data-translate="feature-2-title">Livraison la Plus Rapide</h2>
+                                    <p data-translate="feature-2-description">
+                                        Nous offrons la livraison la plus rapide pour que vous puissiez profiter de nos plats délicieux sans attendre.
                                     </p>
                                 </div>
                             </div>
@@ -306,8 +304,8 @@
                             <div class="col-sm-6">
                                 <div class="feature-item">
                                     <i class="flaticon-medal"></i>
-                                    <h3>Produits de la Meilleure Qualité</h3>
-                                    <p>
+                                    <h3 data-translate="feature-3-title">Meilleurs Produits de Qualité</h3>
+                                    <p data-translate="feature-3-description">
                                         Nous sélectionnons soigneusement nos produits pour garantir la meilleure qualité possible. Chaque ingrédient est choisi avec soin pour offrir une expérience culinaire exceptionnelle.
                                     </p>
                                 </div>
@@ -315,9 +313,9 @@
                             <div class="col-sm-6">
                                 <div class="feature-item">
                                     <i class="flaticon-meat"></i>
-                                    <h3>Légumes et Viandes Frais</h3>
-                                    <p>
-                                        Nous utilisons uniquement des légumes et des viandes frais pour préparer nos plats. Chaque bouchée est un délice, préparée avec soin et passion.
+                                    <h3 data-translate="feature-4-title">Légumes et Viandes Frais</h3>
+                                    <p data-translate="feature-4-description">
+                                        Nous n'utilisons que des légumes et des viandes frais pour préparer nos plats. Chaque bouchée est un délice, préparée avec soin et passion.
                                     </p>
                                 </div>
                             </div>
@@ -335,32 +333,29 @@
                 <div class="row align-items-center">
                     <div class="col-md-4">
                         <div class="food-item">
-                            <i class="flaticon-burger"></i>
-                            <h2>Burgers</h2>
-                            <p>
+                            <h2 data-translate="burgers-title">Burgers</h2>
+                            <p data-translate="burgers-description">
                                 Nos burgers sont préparés avec des ingrédients frais et de haute qualité. Chaque bouchée est un délice, préparée avec soin et passion.
                             </p>
-                            <a href="">Voir le Menu</a>
+                            <a href="" data-translate="view-menu">Voir le Menu</a>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="food-item">
-                            <i class="flaticon-snack"></i>
-                            <h2>Snacks</h2>
-                            <p>
-                                Nos snacks sont parfaits pour une pause gourmande. Préparés avec des ingrédients frais et de haute qualité, chaque bouchée est un délice.
+                            <h2 data-translate="snacks-title">Snacks</h2>
+                            <p data-translate="snacks-description">
+                                Nos snacks sont parfaits pour une douce friandise. Préparés avec des ingrédients frais et de haute qualité, chaque bouchée est un délice.
                             </p>
-                            <a href="">Voir le Menu</a>
+                            <a href="" data-translate="view-menu">Voir le Menu</a>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="food-item">
-                            <i class="flaticon-cocktail"></i>
-                            <h2>Boissons</h2>
-                            <p>
+                            <h2 data-translate="beverages-title">Boissons</h2>
+                            <p data-translate="beverages-description">
                                 Nos boissons sont préparées avec des ingrédients frais et de haute qualité. Chaque gorgée est un délice, préparée avec soin et passion.
                             </p>
-                            <a href="">Voir le Menu</a>
+                            <a href="" data-translate="view-menu">Voir le Menu</a>
                         </div>
                     </div>
                 </div>
@@ -372,19 +367,19 @@
         <div class="menu">
             <div class="container">
                 <div class="section-header text-center">
-                    <p>Menu</p>
-                    <h2>Menu Délicieux</h2>
+                    <p data-translate="menu-title">Menu</p>
+                    <h2 data-translate="menu-subtitle">Menu Délicieux</h2>
                 </div>
                 <div class="menu-tab">
                     <ul class="nav nav-pills justify-content-center">
                         <li class="nav-item">
-                            <a class="nav-link active" data-toggle="pill" href="#burgers">Burgers</a>
+                            <a class="nav-link active" data-toggle="pill" href="#burgers" data-translate="burgers-title">Burgers</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" data-toggle="pill" href="#snacks">Snacks</a>
+                            <a class="nav-link" data-toggle="pill" href="#snacks" data-translate="snacks-title">Snacks</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" data-toggle="pill" href="#beverages">Boissons</a>
+                            <a class="nav-link" data-toggle="pill" href="#beverages" data-translate="beverages-title">Boissons</a>
                         </li>
                     </ul>
                     <div class="tab-content">
@@ -392,48 +387,38 @@
                             <div class="row">
                                 <div class="col-lg-7 col-md-12">
                                     <div class="menu-item">
-                                        <div class="menu-img">
-                                            <img src="img/menu-burger.jpg" alt="Image">
-                                        </div>
                                         <div class="menu-text">
-                                            <h3><span>Mini Burger au Fromage</span> <strong>9,00€</strong></h3>
-                                            <p>Un délicieux mini burger au fromage, préparé avec des ingrédients frais et de haute qualité.</p>
+                                            <h3 data-translate="mini-burger-title">Mini Burger avec Fromage</h3>
+                                            <strong data-translate="mini-burger-price">9,00€</strong>
+                                            <p data-translate="mini-burger-description">Un délicieux mini burger avec fromage, préparé avec des ingrédients frais et de haute qualité.</p>
                                         </div>
                                     </div>
                                     <div class="menu-item">
-                                        <div class="menu-img">
-                                            <img src="img/menu-burger.jpg" alt="Image">
-                                        </div>
                                         <div class="menu-text">
-                                            <h3><span>Double Burger</span> <strong>11,00€</strong></h3>
-                                            <p>Un double burger juteux, préparé avec des ingrédients frais et de haute qualité.</p>
+                                            <h3 data-translate="double-burger-title">Double Burger</h3>
+                                            <strong data-translate="double-burger-price">11,00€</strong>
+                                            <p data-translate="double-burger-description">Un double burger avec beaucoup de viande, préparé avec des ingrédients frais et de haute qualité.</p>
                                         </div>
                                     </div>
                                     <div class="menu-item">
-                                        <div class="menu-img">
-                                            <img src="img/menu-burger.jpg" alt="Image">
-                                        </div>
                                         <div class="menu-text">
-                                            <h3><span>Bacon, Œuf et Fromage</span> <strong>13,00€</strong></h3>
-                                            <p>Un burger savoureux avec du bacon, un œuf et du fromage, préparé avec des ingrédients frais et de haute qualité.</p>
+                                            <h3 data-translate="bacon-egg-cheese-title">Bacon, Oeuf et Fromage</h3>
+                                            <strong data-translate="bacon-egg-cheese-price">13,00€</strong>
+                                            <p data-translate="bacon-egg-cheese-description">Un délicieux burger bacon, œuf et fromage, préparé avec des ingrédients frais et de haute qualité.</p>
                                         </div>
                                     </div>
                                     <div class="menu-item">
-                                        <div class="menu-img">
-                                            <img src="img/menu-burger.jpg" alt="Image">
-                                        </div>
                                         <div class="menu-text">
-                                            <h3><span>Burger au Porc Effiloché</span> <strong>18,00€</strong></h3>
-                                            <p>Un burger au porc effiloché tendre et juteux, préparé avec des ingrédients frais et de haute qualité.</p>
+                                            <h3 data-translate="pork-chop-burger-title">Burger de Côtelette de Porc</h3>
+                                            <strong data-translate="pork-chop-burger-price">18,00€</strong>
+                                            <p data-translate="pork-chop-burger-description">Un burger de côtelette de porc tendre et juteux, préparé avec des ingrédients frais et de haute qualité.</p>
                                         </div>
                                     </div>
                                     <div class="menu-item">
-                                        <div class="menu-img">
-                                            <img src="img/menu-burger.jpg" alt="Image">
-                                        </div>
                                         <div class="menu-text">
-                                            <h3><span>Burger au Poulet Frit</span> <strong>22,00€</strong></h3>
-                                            <p>Un burger au poulet frit croustillant, préparé avec des ingrédients frais et de haute qualité.</p>
+                                            <h3 data-translate="fried-chicken-burger-title">Burger de Poulet Frit</h3>
+                                            <strong data-translate="fried-chicken-burger-price">22,00€</strong>
+                                            <p data-translate="fried-chicken-burger-description">Un burger de poulet frit croustillant, préparé avec des ingrédients frais et de haute qualité.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -451,7 +436,7 @@
                                         </div>
                                         <div class="menu-text">
                                             <h3><span>Corn Tikki - Aloo Frit Épicé</span> <strong>15,00€</strong></h3>
-                                            <p>Un délicieux snack épicé à base de pommes de terre frites, préparé avec des ingrédients frais et de haute qualité.</p>
+                                            <p>A delicious spicy potato tikki, prepared with fresh and high-quality ingredients.</p>
                                         </div>
                                     </div>
                                     <div class="menu-item">
@@ -459,8 +444,8 @@
                                             <img src="img/menu-snack.jpg" alt="Image">
                                         </div>
                                         <div class="menu-text">
-                                            <h3><span>Toast de Pain au Besan</span> <strong>35,00€</strong></h3>
-                                            <p>Un toast savoureux au pain au besan, préparé avec des ingrédients frais et de haute qualité.</p>
+                                            <h3><span>Toast with Besan</span> <strong>35,00€</strong></h3>
+                                            <p>A delicious toast with besan, prepared with fresh and high-quality ingredients.</p>
                                         </div>
                                     </div>
                                     <div class="menu-item">
@@ -468,8 +453,8 @@
                                             <img src="img/menu-snack.jpg" alt="Image">
                                         </div>
                                         <div class="menu-text">
-                                            <h3><span>Snacks de Soya Naturels</span> <strong>20,00€</strong></h3>
-                                            <p>Des snacks de soya naturels et savoureux, préparés avec des ingrédients frais et de haute qualité.</p>
+                                            <h3><span>Natural Soy Snacks</span> <strong>20,00€</strong></h3>
+                                            <p>Natural and delicious soy snacks, prepared with fresh and high-quality ingredients.</p>
                                         </div>
                                     </div>
                                     <div class="menu-item">
@@ -477,8 +462,8 @@
                                             <img src="img/menu-snack.jpg" alt="Image">
                                         </div>
                                         <div class="menu-text">
-                                            <h3><span>Morceaux de Soya Tandoori</span> <strong>30,00€</strong></h3>
-                                            <p>Des morceaux de soya tandoori savoureux, préparés avec des ingrédients frais et de haute qualité.</p>
+                                            <h3><span>Soya Tandoori Pieces</span> <strong>30,00€</strong></h3>
+                                            <p>Soya tandoori pieces with a delicious flavor, prepared with fresh and high-quality ingredients.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -495,8 +480,8 @@
                                             <img src="img/menu-beverage.jpg" alt="Image">
                                         </div>
                                         <div class="menu-text">
-                                            <h3><span>Café en Tasse Unique</span> <strong>7,00€</strong></h3>
-                                            <p>Un café en tasse unique, préparé avec des ingrédients frais et de haute qualité.</p>
+                                            <h3><span>Unique Cup Coffee</span> <strong>7,00€</strong></h3>
+                                            <p>A unique cup of coffee, prepared with fresh and high-quality ingredients.</p>
                                         </div>
                                     </div>
                                     <div class="menu-item">
@@ -504,8 +489,8 @@
                                             <img src="img/menu-beverage.jpg" alt="Image">
                                         </div>
                                         <div class="menu-text">
-                                            <h3><span>Café Americano</span> <strong>9,00€</strong></h3>
-                                            <p>Un café americano savoureux, préparé avec des ingrédients frais et de haute qualité.</p>
+                                            <h3><span>Americano</span> <strong>9,00€</strong></h3>
+                                            <p>A delicious americano, prepared with fresh and high-quality ingredients.</p>
                                         </div>
                                     </div>
                                     <div class="menu-item">
@@ -513,8 +498,8 @@
                                             <img src="img/menu-beverage.jpg" alt="Image">
                                         </div>
                                         <div class="menu-text">
-                                            <h3><span>Macchiato Caramel</span> <strong>15,00€</strong></h3>
-                                            <p>Un macchiato caramel savoureux, préparé avec des ingrédients frais et de haute qualité.</p>
+                                            <h3><span>Caramel Macchiato</span> <strong>15,00€</strong></h3>
+                                            <p>A delicious caramel macchiato, prepared with fresh and high-quality ingredients.</p>
                                         </div>
                                     </div>
                                     <div class="menu-item">
@@ -522,8 +507,8 @@
                                             <img src="img/menu-beverage.jpg" alt="Image">
                                         </div>
                                         <div class="menu-text">
-                                            <h3><span>Café Noir Standard</span> <strong>8,00€</strong></h3>
-                                            <p>Un café noir standard savoureux, préparé avec des ingrédients frais et de haute qualité.</p>
+                                            <h3><span>Standard Black Coffee</span> <strong>8,00€</strong></h3>
+                                            <p>A delicious standard black coffee, prepared with fresh and high-quality ingredients.</p>
                                         </div>
                                     </div>
                                     <div class="menu-item">
@@ -531,8 +516,8 @@
                                             <img src="img/menu-beverage.jpg" alt="Image">
                                         </div>
                                         <div class="menu-text">
-                                            <h3><span>Café Noir Standard</span> <strong>12,00€</strong></h3>
-                                            <p>Un café noir standard savoureux, préparé avec des ingrédients frais et de haute qualité.</p>
+                                            <h3><span>Standard Black Coffee</span> <strong>12,00€</strong></h3>
+                                            <p>A delicious standard black coffee, prepared with fresh and high-quality ingredients.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -551,8 +536,8 @@
         <div class="team">
             <div class="container">
                 <div class="section-header text-center">
-                    <p>Notre Équipe</p>
-                    <h2>Nos Chefs Maîtres</h2>
+                    <p data-translate="team-title">Notre Équipe</p>
+                    <h2 data-translate="team-subtitle">Nos Chefs Maîtres</h2>
                 </div>
                 <div class="row">
                     <div class="col-lg-3 col-md-6">
@@ -568,7 +553,7 @@
                             </div>
                             <div class="team-text">
                                 <h2>Adam Phillips</h2>
-                                <p>PDG, Co-Fondateur</p>
+                                <p>CEO, Co-Founder</p>
                             </div>
                         </div>
                     </div>
@@ -585,7 +570,7 @@
                             </div>
                             <div class="team-text">
                                 <h2>Dylan Adams</h2>
-                                <p>Chef Maître</p>
+                                <p>Master Chef</p>
                             </div>
                         </div>
                     </div>
@@ -602,7 +587,7 @@
                             </div>
                             <div class="team-text">
                                 <h2>Jhon Doe</h2>
-                                <p>Chef Maître</p>
+                                <p>Master Chef</p>
                             </div>
                         </div>
                     </div>
@@ -619,7 +604,7 @@
                             </div>
                             <div class="team-text">
                                 <h2>Josh Dunn</h2>
-                                <p>Chef Maître</p>
+                                <p>Master Chef</p>
                             </div>
                         </div>
                     </div>
@@ -637,9 +622,9 @@
                             <img src="img/testimonial-1.jpg" alt="Image">
                         </div>
                         <p>
-                            Ce restaurant est incroyable ! La nourriture est délicieuse et le service est impeccable. Je recommande vivement cet endroit à tous ceux qui cherchent une expérience culinaire exceptionnelle.
+                            This restaurant is amazing! The food is delicious and the service is impeccable. I highly recommend this place to anyone looking for an exceptional culinary experience.
                         </p>
-                        <h2>Nom du Client</h2>
+                        <h2>Client Name</h2>
                         <h3>Profession</h3>
                     </div>
                     <div class="testimonial-item">
@@ -647,9 +632,9 @@
                             <img src="img/testimonial-2.jpg" alt="Image">
                         </div>
                         <p>
-                            J'ai passé un moment merveilleux dans ce restaurant. Les plats étaient savoureux et le personnel était très accueillant. Je reviendrai certainement !
+                            I had a wonderful time at this restaurant. The dishes were delicious and the staff was very welcoming. I will definitely come back!
                         </p>
-                        <h2>Nom du Client</h2>
+                        <h2>Client Name</h2>
                         <h3>Profession</h3>
                     </div>
                     <div class="testimonial-item">
@@ -657,9 +642,9 @@
                             <img src="img/testimonial-3.jpg" alt="Image">
                         </div>
                         <p>
-                            Ce restaurant est un véritable joyau. La nourriture est excellente et l'ambiance est parfaite pour une soirée romantique ou une célébration spéciale.
+                            This restaurant is a true gem. The food is excellent and the ambiance is perfect for a romantic or special celebration evening.
                         </p>
-                        <h2>Nom du Client</h2>
+                        <h2>Client Name</h2>
                         <h3>Profession</h3>
                     </div>
                     <div class="testimonial-item">
@@ -667,9 +652,9 @@
                             <img src="img/testimonial-4.jpg" alt="Image">
                         </div>
                         <p>
-                            J'ai été très impressionné par la qualité de la nourriture et le service dans ce restaurant. C'est définitivement l'un de mes endroits préférés pour dîner.
+                            I was very impressed by the quality of the food and the service in this restaurant. It's definitely one of my favorite places to dine.
                         </p>
-                        <h2>Nom du Client</h2>
+                        <h2>Client Name</h2>
                         <h3>Profession</h3>
                     </div>
                 </div>
@@ -681,8 +666,8 @@
         <div class="contact">
             <div class="container">
                 <div class="section-header text-center">
-                    <p>Contactez-Nous</p>
-                    <h2>Contactez-Nous pour Toute Question</h2>
+                    <p data-translate="contact-title">Contactez-Nous</p>
+                    <h2 data-translate="contact-subtitle">Contactez-Nous pour Toute Question</h2>
                 </div>
                 <div class="row align-items-center contact-information">
                     <div class="col-md-6 col-lg-3">
@@ -691,8 +676,8 @@
                                 <i class="fa fa-map-marker-alt"></i>
                             </div>
                             <div class="contact-text">
-                                <h3>Adresse</h3>
-                                <p>123 Rue, NY, USA</p>
+                                <h3 data-translate="address-title">Adresse</h3>
+                                <p data-translate="address">123 Rue, NY, USA</p>
                             </div>
                         </div>
                     </div>
@@ -702,8 +687,8 @@
                                 <i class="fa fa-phone-alt"></i>
                             </div>
                             <div class="contact-text">
-                                <h3>Appelez-Nous</h3>
-                                <p>+012 345 6789</p>
+                                <h3 data-translate="call-title">Appelez-Nous</h3>
+                                <p data-translate="call">+012 345 6789</p>
                             </div>
                         </div>
                     </div>
@@ -713,8 +698,8 @@
                                 <i class="fa fa-envelope"></i>
                             </div>
                             <div class="contact-text">
-                                <h3>Écrivez-Nous</h3>
-                                <p>GlamourResto@gmail.com</p>
+                                <h3 data-translate="email-title">Emaillez-Nous</h3>
+                                <p data-translate="email">GlamourResto@gmail.com</p>
                             </div>
                         </div>
                     </div>
@@ -724,7 +709,7 @@
                                 <i class="fa fa-share"></i>
                             </div>
                             <div class="contact-text">
-                                <h3>Suivez-Nous</h3>
+                                <h3 data-translate="follow-title">Suivez-Nous</h3>
                                 <div class="contact-social">
                                     <a href=""><i class="fab fa-twitter"></i></a>
                                     <a href=""><i class="fab fa-facebook-f"></i></a>
@@ -760,7 +745,7 @@
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div>
-                                <button class="btn custom-btn" type="submit" id="sendMessageButton">Envoyer le Message</button>
+                                <button class="btn custom-btn" type="submit" id="sendMessageButton" data-translate="footer-submit">Soumettre</button>
                             </div>
                         </form>
                     </div>
@@ -773,8 +758,8 @@
         <div class="blog">
             <div class="container">
                 <div class="section-header text-center">
-                    <p>Blog Alimentaire</p>
-                    <h2>Dernières Nouvelles du Blog Alimentaire</h2>
+                    <p data-translate="food-blog-title">Blog Alimentaire</p>
+                    <h2 data-translate="food-blog-subtitle">Dernières Nouvelles du Blog Alimentaire</h2>
                 </div>
                 <div class="row">
                     <div class="col-md-6">
@@ -783,17 +768,15 @@
                                 <img src="img/blog-1.jpg" alt="Blog">
                             </div>
                             <div class="blog-content">
-                                <h2 class="blog-title">Découvrez nos Nouveaux Plats</h2>
+                                <h2 data-translate="blog-title-1">Découvrez Nos Nouveaux Plats</h2>
                                 <div class="blog-meta">
-                                    <p><i class="far fa-user"></i>Admin</p>
-                                    <p><i class="far fa-list-alt"></i>Nourriture</p>
-                                    <p><i class="far fa-calendar-alt"></i>01-Jan-2045</p>
-                                    <p><i class="far fa-comments"></i>10</p>
+                                    <p data-translate="blog-admin">Admin</p>
+                                    <p data-translate="blog-category">Alimentation</p>
+                                    <p data-translate="blog-date">01-Jan-2045</p>
+                                    <p data-translate="blog-comments">10</p>
                                 </div>
                                 <div class="blog-text">
-                                    <p>
-                                        Nous avons ajouté de nouveaux plats délicieux à notre menu. Venez les découvrir et profiter d'une expérience culinaire unique.
-                                    </p>
+                                    <p data-translate="blog-description-1">Nous avons ajouté de nouveaux plats délicieux à notre menu. Venez les découvrir et profitez d'une expérience culinaire unique.</p>
                                     <a class="btn custom-btn" href="">Lire la Suite</a>
                                 </div>
                             </div>
@@ -805,17 +788,15 @@
                                 <img src="img/blog-2.jpg" alt="Blog">
                             </div>
                             <div class="blog-content">
-                                <h2 class="blog-title">Nos Secrets de Cuisine</h2>
+                                <h2 data-translate="blog-title-2">Nos Secrets de Cuisine</h2>
                                 <div class="blog-meta">
-                                    <p><i class="far fa-user"></i>Admin</p>
-                                    <p><i class="far fa-list-alt"></i>Nourriture</p>
-                                    <p><i class="far fa-calendar-alt"></i>01-Jan-2045</p>
-                                    <p><i class="far fa-comments"></i>10</p>
+                                    <p data-translate="blog-admin">Admin</p>
+                                    <p data-translate="blog-category">Alimentation</p>
+                                    <p data-translate="blog-date">01-Jan-2045</p>
+                                    <p data-translate="blog-comments">10</p>
                                 </div>
                                 <div class="blog-text">
-                                    <p>
-                                        Découvrez les secrets de notre cuisine et apprenez à préparer des plats délicieux chez vous. Nos chefs partagent leurs astuces et techniques pour vous aider à devenir un pro de la cuisine.
-                                    </p>
+                                    <p data-translate="blog-description-2">Découvrez nos secrets de cuisine et apprenez à préparer de délicieux plats chez vous. Nos chefs partagent leurs conseils et techniques pour vous aider à devenir un pro de la cuisine.</p>
                                     <a class="btn custom-btn" href="">Lire la Suite</a>
                                 </div>
                             </div>
@@ -834,10 +815,10 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="footer-contact">
-                                    <h2>Notre Adresse</h2>
-                                    <p><i class="fa fa-map-marker-alt"></i>41 Bis, Monte-Carlo, Monaco</p>
-                                    <p><i class="fa fa-phone-alt"></i>+33 345 67890</p>
-                                    <p><i class="fa fa-envelope"></i>info@glamourrestaurant.com</p>
+                                    <h2 data-translate="footer-address-title">Notre Adresse</h2>
+                                    <p data-translate="footer-address">41 Bis, Monte-Carlo, Monaco</p>
+                                    <p data-translate="footer-phone">+33 345 67890</p>
+                                    <p data-translate="footer-email">info@glamourrestaurant.com</p>
                                     <div class="footer-social">
                                         <a href=""><i class="fab fa-twitter"></i></a>
                                         <a href=""><i class="fab fa-facebook-f"></i></a>
@@ -849,25 +830,25 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="footer-link">
-                                    <h2>Liens Rapides</h2>
-                                    <a href="">Conditions d'utilisation</a>
-                                    <a href="">Politique de confidentialité</a>
-                                    <a href="">Cookies</a>
-                                    <a href="">Aide</a>
-                                    <a href="">FAQ</a>
+                                    <h2 data-translate="footer-quick-links-title">Liens Rapides</h2>
+                                    <a data-translate="footer-terms" href="">Conditions d'Utilisation</a>
+                                    <a data-translate="footer-privacy" href="">Politique de Confidentialité</a>
+                                    <a data-translate="footer-cookies" href="">Cookies</a>
+                                    <a data-translate="footer-help" href="">Aide</a>
+                                    <a data-translate="footer-faq" href="">FAQ</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-5">
                         <div class="footer-newsletter">
-                            <h2>Newsletter</h2>
-                            <p>
-                                Abonnez-vous à notre newsletter pour recevoir les dernières nouvelles, offres spéciales et événements directement dans votre boîte de réception.
+                            <h2 data-translate="footer-newsletter-title">Newsletter</h2>
+                            <p data-translate="footer-newsletter-description">
+                                Subscribe to our newsletter to receive the latest news, special offers, and events directly in your inbox.
                             </p>
                             <div class="form">
-                                <input class="form-control" placeholder="Entrez votre email ici">
-                                <button class="btn custom-btn">Soumettre</button>
+                                <input class="form-control" placeholder="Enter your email here">
+                                <button class="btn custom-btn" data-translate="footer-submit">Submit</button>
                             </div>
                         </div>
                     </div>
@@ -875,8 +856,7 @@
             </div>
             <div class="copyright">
                 <div class="container">
-                    <p>Copyright &copy; <a href="#">Nom de Votre Site</a>, Tous Droits Réservés.</p>
-                    <p>Designé par <a href="https://htmlcodex.com">HTML Codex</a></p>
+                    <p data-translate="footer-copyright">Copyright © Votre Nom de Site, Tous Droits Réservés. Conçu par HTML Codex</p>
                 </div>
             </div>
         </div>
@@ -899,5 +879,184 @@
 
         <!-- Template Javascript -->
         <script src="js/main.js"></script>
+
+        <script>
+        const translations = {
+            fr: {
+                "home": "Accueil",
+                "about": "À Propos",
+                "features": "Caractéristiques",
+                "team": "Équipe",
+                "menu": "Menu",
+                "booking": "Réservation",
+                "contact": "Contact",
+                "hero-title": "Le meilleur endroit pour déguster des plats délicieux!",
+                "services-title": "Nos <em>Services</em>",
+                "services-desc": "Immortaliser vos instants, créer des souvenirs",
+                "testimonials-title": "Témoignages",
+                "testimonial-1": "« PhotoMastery est le meilleur endroit pour apprendre la photographie. »",
+                "say-hello": "Dites <em>Bonjour</em>",
+                "burgers-title": "Burgers",
+                "burgers-description": "Nos burgers sont préparés avec des ingrédients frais et de haute qualité. Chaque bouchée est un délice, préparée avec soin et passion.",
+                "view-menu": "Voir le Menu",
+                "snacks-title": "Snacks",
+                "snacks-description": "Nos snacks sont parfaits pour une douce friandise. Préparés avec des ingrédients frais et de haute qualité, chaque bouchée est un délice.",
+                "beverages-title": "Boissons",
+                "beverages-description": "Nos boissons sont préparées avec des ingrédients frais et de haute qualité. Chaque gorgée est un délice, préparée avec soin et passion.",
+                "menu-title": "Menu",
+                "menu-subtitle": "Menu Délicieux",
+                "mini-burger-title": "Mini Burger avec Fromage",
+                "mini-burger-price": "9,00€",
+                "mini-burger-description": "Un délicieux mini burger avec fromage, préparé avec des ingrédients frais et de haute qualité.",
+                "double-burger-title": "Double Burger",
+                "double-burger-price": "11,00€",
+                "double-burger-description": "Un double burger avec beaucoup de viande, préparé avec des ingrédients frais et de haute qualité.",
+                "bacon-egg-cheese-title": "Bacon, Oeuf et Fromage",
+                "bacon-egg-cheese-price": "13,00€",
+                "bacon-egg-cheese-description": "Un délicieux burger bacon, œuf et fromage, préparé avec des ingrédients frais et de haute qualité.",
+                "pork-chop-burger-title": "Burger de Côtelette de Porc",
+                "pork-chop-burger-price": "18,00€",
+                "pork-chop-burger-description": "Un burger de côtelette de porc tendre et juteux, préparé avec des ingrédients frais et de haute qualité.",
+                "fried-chicken-burger-title": "Burger de Poulet Frit",
+                "fried-chicken-burger-price": "22,00€",
+                "fried-chicken-burger-description": "Un burger de poulet frit croustillant, préparé avec des ingrédients frais et de haute qualité.",
+                "team-title": "Notre Équipe",
+                "team-subtitle": "Nos Chefs Maîtres",
+                "contact-title": "Contactez-Nous",
+                "contact-subtitle": "Contactez-Nous pour Toute Question",
+                "address-title": "Adresse",
+                "address": "123 Rue, NY, USA",
+                "call-title": "Appelez-Nous",
+                "call": "+012 345 6789",
+                "email-title": "Emaillez-Nous",
+                "email": "GlamourResto@gmail.com",
+                "follow-title": "Suivez-Nous",
+                "your-name": "Votre Nom",
+                "your-email": "Votre Email",
+                "subject": "Sujet",
+                "message": "Message",
+                "food-blog-title": "Blog Alimentaire",
+                "food-blog-subtitle": "Dernières Nouvelles du Blog Alimentaire",
+                "blog-title-1": "Découvrez Nos Nouveaux Plats",
+                "blog-admin": "Admin",
+                "blog-category": "Alimentation",
+                "blog-date": "01-Jan-2045",
+                "blog-comments": "10",
+                "blog-description-1": "Nous avons ajouté de nouveaux plats délicieux à notre menu. Venez les découvrir et profitez d'une expérience culinaire unique.",
+                "blog-title-2": "Nos Secrets de Cuisine",
+                "blog-description-2": "Découvrez nos secrets de cuisine et apprenez à préparer de délicieux plats chez vous. Nos chefs partagent leurs conseils et techniques pour vous aider à devenir un pro de la cuisine.",
+                "footer-address-title": "Notre Adresse",
+                "footer-address": "41 Bis, Monte-Carlo, Monaco",
+                "footer-phone": "+33 345 67890",
+                "footer-email": "info@glamourrestaurant.com",
+                "footer-quick-links-title": "Liens Rapides",
+                "footer-terms": "Conditions d'Utilisation",
+                "footer-privacy": "Politique de Confidentialité",
+                "footer-cookies": "Cookies",
+                "footer-help": "Aide",
+                "footer-faq": "FAQ",
+                "footer-newsletter-title": "Newsletter",
+                "footer-newsletter-description": "Abonnez-vous à notre bulletin d'information pour recevoir les dernières nouvelles, offres spéciales et événements directement dans votre boîte de réception.",
+                "footer-newsletter-input": "Entrez votre email ici",
+                "footer-copyright": "Copyright © Votre Nom de Site, Tous Droits Réservés. Conçu par HTML Codex"
+            },
+            en: {
+                "home": "Home",
+                "about": "About",
+                "features": "Features",
+                "team": "Team",
+                "menu": "Menu",
+                "booking": "Booking",
+                "contact": "Contact",
+                "hero-title": "The best place to learn <em><br>photography!</em>",
+                "services-title": "Our <em>Services</em>",
+                "services-desc": "Capture your moments, create memories",
+                "testimonials-title": "Testimonials",
+                "testimonial-1": "« PhotoMastery is the best place to learn photography. »",
+                "say-hello": "Say <em>Hello</em>",
+                "burgers-title": "Burgers",
+                "burgers-description": "Our burgers are prepared with fresh and high-quality ingredients. Each bite is a delight, prepared with care and passion.",
+                "view-menu": "View Menu",
+                "snacks-title": "Snacks",
+                "snacks-description": "Our snacks are perfect for a sweet treat. Prepared with fresh and high-quality ingredients, each bite is a delight.",
+                "beverages-title": "Beverages",
+                "beverages-description": "Our beverages are prepared with fresh and high-quality ingredients. Each sip is a delight, prepared with care and passion.",
+                "menu-title": "Menu",
+                "menu-subtitle": "Delicious Menu",
+                "mini-burger-title": "Mini Burger with Cheese",
+                "mini-burger-price": "9,00€",
+                "mini-burger-description": "A delicious mini burger with cheese, prepared with fresh and high-quality ingredients.",
+                "double-burger-title": "Double Burger",
+                "double-burger-price": "11,00€",
+                "double-burger-description": "A double burger with lots of meat, prepared with fresh and high-quality ingredients.",
+                "bacon-egg-cheese-title": "Bacon, Egg and Cheese",
+                "bacon-egg-cheese-price": "13,00€",
+                "bacon-egg-cheese-description": "A delicious bacon, egg, and cheese burger, prepared with fresh and high-quality ingredients.",
+                "pork-chop-burger-title": "Pork Chop Burger",
+                "pork-chop-burger-price": "18,00€",
+                "pork-chop-burger-description": "A tender and juicy pork chop burger, prepared with fresh and high-quality ingredients.",
+                "fried-chicken-burger-title": "Fried Chicken Burger",
+                "fried-chicken-burger-price": "22,00€",
+                "fried-chicken-burger-description": "A crispy fried chicken burger, prepared with fresh and high-quality ingredients.",
+                "team-title": "Our Team",
+                "team-subtitle": "Our Master Chefs",
+                "contact-title": "Contact Us",
+                "contact-subtitle": "Contact Us for Any Question",
+                "address-title": "Address",
+                "address": "123 Rue, NY, USA",
+                "call-title": "Call Us",
+                "call": "+012 345 6789",
+                "email-title": "Email Us",
+                "email": "GlamourResto@gmail.com",
+                "follow-title": "Follow Us",
+                "your-name": "Your Name",
+                "your-email": "Your Email",
+                "subject": "Subject",
+                "message": "Message",
+                "food-blog-title": "Food Blog",
+                "food-blog-subtitle": "Latest News from the Food Blog",
+                "blog-title-1": "Discover Our New Dishes",
+                "blog-admin": "Admin",
+                "blog-category": "Food",
+                "blog-date": "01-Jan-2045",
+                "blog-comments": "10",
+                "blog-description-1": "We've added some new delicious dishes to our menu. Come and discover them and enjoy a unique culinary experience.",
+                "blog-title-2": "Our Cooking Secrets",
+                "blog-description-2": "Discover our cooking secrets and learn how to prepare delicious dishes at home. Our chefs share their tips and techniques to help you become a culinary pro.",
+                "footer-address-title": "Our Address",
+                "footer-address": "41 Bis, Monte-Carlo, Monaco",
+                "footer-phone": "+33 345 67890",
+                "footer-email": "info@glamourrestaurant.com",
+                "footer-quick-links-title": "Quick Links",
+                "footer-terms": "Terms of Use",
+                "footer-privacy": "Privacy Policy",
+                "footer-cookies": "Cookies",
+                "footer-help": "Help",
+                "footer-faq": "FAQ",
+                "footer-newsletter-title": "Newsletter",
+                "footer-newsletter-description": "Subscribe to our newsletter to receive the latest news, special offers, and events directly in your inbox.",
+                "footer-newsletter-input": "Enter your email here",
+                "footer-copyright": "Copyright © Your Site Name, All Rights Reserved. Designed by HTML Codex"
+            }
+        };
+
+        function changeLanguage(lang) {
+            const elements = document.querySelectorAll('[data-translate]');
+            elements.forEach(element => {
+                const key = element.getAttribute('data-translate');
+                if (translations[lang][key]) {
+                    element.innerHTML = translations[lang][key];
+                }
+            });
+
+            localStorage.setItem('selectedLanguage', lang);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLanguage = localStorage.getItem('selectedLanguage') || 'fr';
+            document.getElementById('languageSelect').value = savedLanguage;
+            changeLanguage(savedLanguage);
+        });
+        </script>
     </body>
 </html>
