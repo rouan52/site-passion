@@ -2,7 +2,7 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8">
-        <title>Glamour Restaurant chez Aya </title>
+        <title data-translate="page-title">Glamour Restaurant chez Aya</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="Modèle de Site Web Gratuit" name="keywords">
         <meta content="Modèle de Site Web Gratuit" name="description">
@@ -29,21 +29,26 @@
         <!-- Nav Bar Start -->
         <div class="navbar navbar-expand-lg bg-light navbar-light">
             <div class="container-fluid">
-                <a href="index.html" class="navbar-brand">Glamour <span> Restaurant</span></a>
+                <a href="index.html" class="navbar-brand" data-translate="restaurant-name">Glamour <span>Restaurant</span></a>
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav ml-auto">
-                        <a href="index.html" class="nav-item nav-link">Accueil</a>
-                        <a href="about.html" class="nav-item nav-link active">À Propos</a>
-                        <a href="feature.html" class="nav-item nav-link">Caractéristiques</a>
-                      
-                        <a href="menu.html" class="nav-item nav-link">Menu</a>
-                        <a href="booking.html" class="nav-item nav-link">Réservation</a>
-                        
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        <a href="index.html" class="nav-item nav-link" data-translate="home">Accueil</a>
+                        <a href="about.html" class="nav-item nav-link active" data-translate="about">À Propos</a>
+                        <a href="feature.html" class="nav-item nav-link" data-translate="features">Caractéristiques</a>
+                        <a href="team.html" class="nav-item nav-link" data-translate="team">Chef</a>
+                        <a href="menu.html" class="nav-item nav-link" data-translate="menu">Menu</a>
+                        <a href="booking.html" class="nav-item nav-link" data-translate="booking">Réservation</a>
+                        <a href="contact.html" class="nav-item nav-link" data-translate="contact">Contact</a>
+                        <li class="nav-item language-selector">
+                            <select id="languageSelect" onchange="changeLanguage(this.value)" class="form-control">
+                                <option value="fr">FR</option>
+                                <option value="en">EN</option>
+                            </select>
+                        </li>
                     </div>
                 </div>
             </div>
@@ -55,11 +60,11 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h2>À Propos de Nous</h2>
+                        <h2 data-translate="about-title">À Propos de Nous</h2>
                     </div>
                     <div class="col-12">
-                        <a href="">Accueil</a>
-                        <a href="">À Propos de Nous</a>
+                        <a href="" data-translate="home">Accueil</a>
+                        <a href="" data-translate="about">À Propos de Nous</a>
                     </div>
                 </div>
             </div>
@@ -73,31 +78,31 @@
                     <div class="col-md-4">
                         <div class="food-item">
                             <i class="flaticon-burger"></i>
-                            <h2>Burgers</h2>
-                            <p>
+                            <h2 data-translate="burgers-title">Burgers</h2>
+                            <p data-translate="burgers-description">
                                 Nos burgers sont préparés avec des ingrédients frais et de haute qualité. Chaque bouchée est un délice, préparée avec soin et passion.
                             </p>
-                            <a href="">Voir le Menu</a>
+                            <a href="" data-translate="view-menu">Voir le Menu</a>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="food-item">
                             <i class="flaticon-snack"></i>
-                            <h2>Snacks</h2>
-                            <p>
+                            <h2 data-translate="snacks-title">Snacks</h2>
+                            <p data-translate="snacks-description">
                                 Nos snacks sont parfaits pour une pause gourmande. Préparés avec des ingrédients frais et de haute qualité, chaque bouchée est un délice.
                             </p>
-                            <a href="">Voir le Menu</a>
+                            <a href="" data-translate="view-menu">Voir le Menu</a>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="food-item">
                             <i class="flaticon-cocktail"></i>
-                            <h2>Boissons</h2>
-                            <p>
+                            <h2 data-translate="beverages-title">Boissons</h2>
+                            <p data-translate="beverages-description">
                                 Nos boissons sont préparées avec des ingrédients frais et de haute qualité. Chaque gorgée est un délice, préparée avec soin et passion.
                             </p>
-                            <a href="">Voir le Menu</a>
+                            <a href="" data-translate="view-menu">Voir le Menu</a>
                         </div>
                     </div>
                 </div>
@@ -120,10 +125,12 @@
                     <div class="col-lg-6">
                         <div class="about-content">
                             <div class="section-header">
-                                <p>À Propos de Nous</p>
-                                <h2>Cuisine Depuis 1990</h2>
+                                <p data-translate="about-subtitle">À Propos de Nous</p>
+                                <h2 data-translate="about-title">Cuisine Depuis 1990</h2>
                             </div>
-                            
+                            <p data-translate="about-description">
+                                Depuis 1990, nous nous efforçons de vous offrir une expérience culinaire exceptionnelle. Notre passion pour la cuisine et notre engagement envers la qualité nous ont permis de devenir l'un des restaurants les plus appréciés de la région.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -157,10 +164,10 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="footer-contact">
-                                    <h2>Notre Adresse</h2>
-                                    <p><i class="fa fa-map-marker-alt"></i>41 Bis, Monte-Carlo, Monaco</p>
-                                    <p><i class="fa fa-phone-alt"></i>+33 345 67890</p>
-                                    <p><i class="fa fa-envelope"></i>info@restaurantglamour.com</p>
+                                    <h2 data-translate="footer-address-title">Notre Adresse</h2>
+                                    <p data-translate="footer-address"><i class="fa fa-map-marker-alt"></i>41 Bis, Monte-Carlo, Monaco</p>
+                                    <p data-translate="footer-phone"><i class="fa fa-phone-alt"></i>+33 345 67890</p>
+                                    <p data-translate="footer-email"><i class="fa fa-envelope"></i>info@restaurantglamour.com</p>
                                     <div class="footer-social">
                                         <a href=""><i class="fab fa-twitter"></i></a>
                                         <a href=""><i class="fab fa-facebook-f"></i></a>
@@ -172,25 +179,25 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="footer-link">
-                                    <h2>Liens Rapides</h2>
-                                    <a href="">Conditions d'utilisation</a>
-                                    <a href="">Politique de confidentialité</a>
-                                    <a href="">Cookies</a>
-                                    <a href="">Aide</a>
-                                    <a href="">FAQ</a>
+                                    <h2 data-translate="footer-quick-links-title">Liens Rapides</h2>
+                                    <a data-translate="footer-terms" href="">Conditions d'utilisation</a>
+                                    <a data-translate="footer-privacy" href="">Politique de confidentialité</a>
+                                    <a data-translate="footer-cookies" href="">Cookies</a>
+                                    <a data-translate="footer-help" href="">Aide</a>
+                                    <a data-translate="footer-faq" href="">FAQ</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-5">
                         <div class="footer-newsletter">
-                            <h2>Newsletter</h2>
-                            <p>
-                                Abonnez-vous à notre newsletter pour recevoir les dernières nouvelles, offres spéciales et événements directement dans votre boîte de réception.
+                            <h2 data-translate="footer-newsletter-title">Newsletter</h2>
+                            <p data-translate="footer-newsletter-description">
+                                Abonnez-vous à notre bulletin d'information pour recevoir les dernières nouvelles, offres spéciales et événements directement dans votre boîte de réception.
                             </p>
                             <div class="form">
-                                <input class="form-control" placeholder="Entrez votre email ici">
-                                <button class="btn custom-btn">Soumettre</button>
+                                <input class="form-control" placeholder="Entrez votre email ici" data-translate="footer-newsletter-input">
+                                <button class="btn custom-btn" data-translate="footer-submit">Soumettre</button>
                             </div>
                         </div>
                     </div>
@@ -198,7 +205,7 @@
             </div>
             <div class="copyright">
                 <div class="container">
-                    <p>Copyright &copy; <a href="#">Nom de Votre Site</a>, Tous Droits Réservés.</p>
+                    <p data-translate="footer-copyright">Copyright &copy; <a href="#">Nom de Votre Site</a>, Tous Droits Réservés.</p>
                     <p>Designé par <a href="https://htmlcodex.com">HTML Codex</a></p>
                 </div>
             </div>
@@ -222,5 +229,54 @@
 
         <!-- Template Javascript -->
         <script src="js/main.js"></script>
+
+        <script>
+        const translations = {
+            fr: {
+                "home": "Accueil",
+                "about": "À Propos",
+                "features": "Caractéristiques",
+                "team": "Équipe",
+                "menu": "Menu",
+                "booking": "Réservation",
+                "contact": "Contact",
+                "about-title": "À Propos de Nous",
+                "about-subtitle": "Cuisine Depuis 1990",
+                "about-description": "Depuis 1990, nous nous efforçons de vous offrir une expérience culinaire exceptionnelle. Notre passion pour la cuisine et notre engagement envers la qualité nous ont permis de devenir l'un des restaurants les plus appréciés de la région.",
+                // Ajoutez d'autres traductions ici
+            },
+            en: {
+                "home": "Home",
+                "about": "About",
+                "features": "Features",
+                "team": "Team",
+                "menu": "Menu",
+                "booking": "Booking",
+                "contact": "Contact",
+                "about-title": "About Us",
+                "about-subtitle": "Cuisine Since 1990",
+                "about-description": "Since 1990, we strive to offer you an exceptional culinary experience. Our passion for cuisine and our commitment to quality have allowed us to become one of the most appreciated restaurants in the region.",
+                // Ajoutez d'autres traductions ici
+            }
+        };
+
+        function changeLanguage(lang) {
+            const elements = document.querySelectorAll('[data-translate]');
+            elements.forEach(element => {
+                const key = element.getAttribute('data-translate');
+                if (translations[lang][key]) {
+                    element.innerHTML = translations[lang][key];
+                }
+            });
+
+            localStorage.setItem('selectedLanguage', lang);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLanguage = localStorage.getItem('selectedLanguage') || 'fr';
+            document.getElementById('languageSelect').value = savedLanguage;
+            changeLanguage(savedLanguage);
+        });
+        </script>
     </body>
 </html>
